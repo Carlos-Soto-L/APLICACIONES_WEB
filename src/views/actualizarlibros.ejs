@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro</title>
+</head>
+<body>
+    <form action="/actualizarlibro/<%=libro[0]._id%>" method="post">
+        <label for="">Nombre</label>
+        <input type="text" name="Nombre" autofocus required value="<%= libro[0].Nombre %>">
+
+        <label for="">Autor</label>
+        <input type="text" name="Autor" required value="<%= libro[0].Autor %>">
+
+        <label for="">Editorial</label>
+        <input type="text" name="Editorial" required value="<%= libro[0].Editorial %>">
+
+
+        <label for="">Unidades disponibles</label>
+        <input type="number" name="unidis" min="0" required value="<%= libro[0].UnidadesDisponibles %>">
+
+
+        <label for="">Ciudad</label>
+        <input type="text" name="Ciudad"  required value="<%= libro[0].Ciudad %>">
+    
+        <input type="submit" value="Actualizar">
+    </form>
+</body>
+</html>
